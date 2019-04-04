@@ -1,0 +1,39 @@
+<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand" style="width: 100%;">
+      <a class="navbar-item" routerLink="/">
+        <span class="title">BLOG</span>
+      </a>
+  
+      <!-- <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a> -->
+      <!-- <div class="is-pulled-right">  -->
+      <div class="navbar-item navbar-item-right">
+        <div class="buttons">
+          <a class="button is-primary" routerLink="create-post">
+            <strong>+ Add post</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>  
+</nav>
+  
+  <body>
+    <main>
+        <section class="section">
+            <div class="container">
+              <div class="main-body">
+              <router-outlet></router-outlet>
+            </div>
+              <!-- <h1 class="title">Section</h1>
+              <h2 class="subtitle">
+                A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+              </h2> -->
+            </div>
+          </section>
+    </main>
+  </body>

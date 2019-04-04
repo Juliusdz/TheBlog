@@ -1,0 +1,16 @@
+// @media screen and (min-width: 1088px)
+// .bd-lead
+
+.main-body {
+  padding-top: 3rem;
+}
+
+.navbar-item-right {
+  margin-left: auto; 
+}
+@media screen and (min-width: 1088px) {
+  .navbar-item-right {
+    margin-right: -.75rem;
+    padding: 0; 
+  }
+}

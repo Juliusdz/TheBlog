@@ -1,0 +1,15 @@
+.card {
+  max-width: 700px;
+  margin: 0 auto;
+
+  .card-header {
+    justify-content: flex-end;
+  }
+}
+fa {
+  font-size: 1.2rem;
+}
+
+.body, .title {
+  word-break: break-all;
+}

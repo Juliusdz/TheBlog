@@ -1,0 +1,19 @@
+<div class="card-content">
+  <p class="title">
+      {{ post.title }}
+  </p>
+  <p class="body">
+    {{ post.body }}
+  </p>
+</div>
+<footer class="card-footer">
+  <a routerLink="{{'post/' + post.id}}" class="has-text-white card-footer-item has-background-primary">
+    <strong>Read more</strong>
+  </a>
+  <a routerLink="{{'edit-post/' + post.id}}" class="has-text-dark card-footer-item has-background-light">
+    <strong>Edit</strong>
+  </a>
+  <a (click)="deletePost(post.id)" class="has-text-white card-footer-item has-background-danger">
+    <strong>Delete</strong>
+  </a>        
+</footer>

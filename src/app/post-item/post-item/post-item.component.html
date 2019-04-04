@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    <a routerLink="{{'/edit-post/' + postId}}" class="has-text-primary">
+      <span class="card-header-icon icon is-large">
+        <fa name="edit"></fa>
+      </span>
+    </a>
+    <a (click)="deletePost()" class="has-text-danger">
+      <span class="card-header-icon icon is-large">
+        <fa name="trash"></fa>
+      </span>
+    </a>    
+  </div>
+  <div class="card-content" *ngIf="post">
+    <p class="title">
+        {{ post.title }}
+    </p>
+    <p class="body">
+      {{ post.body }}
+    </p>
+  </div>
+</div>
