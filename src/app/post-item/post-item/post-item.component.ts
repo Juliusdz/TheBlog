@@ -38,7 +38,7 @@ export class PostItemComponent implements OnInit {
 
   deletePost() {
     this.store.dispatch(new DeletePost({id: this.postId}));
-    this.router.navigateByUrl('/')
+    this.router.navigateByUrl('/');
   }
 
 }

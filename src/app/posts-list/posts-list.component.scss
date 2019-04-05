@@ -1,8 +1,8 @@
-.card {
+.cardsList {
   max-width: 500px;
   margin: 0 auto;
 }
 
-.card + .card {
+.card + .card, .pagination {
   margin-top: 20px;
 }

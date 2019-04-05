@@ -1,3 +1,19 @@
-<div class="card" *ngFor="let post of currentPosts$ | async">
-  <app-posts-list-item [post]="post"></app-posts-list-item>
+<div class="cardsList">
+  <div class="card" *ngFor="let post of currentPosts$ | async">
+    <app-posts-list-item [post]="post"></app-posts-list-item>
+  </div>
+
+  <nav class="pagination" role="navigation" aria-label="pagination">
+    <button class="pagination-previous" (click)="prevPage()" [disabled]="firstPage">Previous</button>
+    <button class="pagination-next" (click)="nextPage()" [disabled]="lastPage">Next page</button>
+    <ul class="pagination-list">
+      <li *ngFor="let page of paginationButtons">
+        <a 
+          [ngClass]="{'pagination-link': true, 'is-current': page === pageQuery.pageIndex + 1}" 
+          aria-label="{'Goto page ' page}" 
+          (click)="navigateToPage(page)"> {{ page }}
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>

@@ -10,8 +10,6 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 
 import * as uniqid from 'uniqid';
 
-// const uniqid = require('uniqid');
-
 @Component({
   selector: 'app-post-form',
   templateUrl: './post-form.component.html',

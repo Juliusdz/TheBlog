@@ -54,6 +54,11 @@ export class UpdatePostSuccess implements Action {
   readonly type = PostActionTypes.UpdatePostSuccess;
 }
 
+export interface PageQuery {
+  pageIndex: number;
+  pageSize: number;
+}
+
 
 export type PostActions =
   LoadPosts | AddPost | AddPostSuccess | RequestPost | RequestPostSuccess |

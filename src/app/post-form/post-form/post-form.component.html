@@ -1,23 +1,23 @@
 <div class="formWrapper">
-  <span class="title center">{{postId ? 'Redaguoti straipsnį' : 'Kurti naują straipsnį' }}</span>
+  <span class="title center">{{postId ? 'Edit Post' : 'Create Post' }}</span>
   <form class="form" [formGroup]="postForm" (ngSubmit)="savePost()">
     <div class="field">
-      <label class="label" for="titleInput">Antraštė</label>
+      <label class="label" for="titleInput">Title</label>
       <div class="control">
-        <input class="input" type="text" placeholder="Text input" id="titleInput" formControlName="titleInput">
+        <input class="input" type="text" placeholder="Write a title" id="titleInput" formControlName="titleInput">
       </div>
     </div>  
   
     <div class="field">
-      <label class="label" for="bodyTextArea">Tekstas</label>
+      <label class="label" for="bodyTextArea">Post body</label>
       <div class="control">
-        <textarea class="textarea" placeholder="Straipsnio tekstas" id="bodyTextArea" formControlName="bodyTextArea"></textarea>
+        <textarea class="textarea" placeholder="Post body here" id="bodyTextArea" formControlName="bodyTextArea"></textarea>
       </div>
     </div>  
   
     <div class="field is-grouped">
       <div class="control">
-        <button type="submit" class="button is-primary">{{postId ? 'Atnaujinti' : 'Sukurti' }}</button>
+        <button [disabled]="!postForm.valid" type="submit" class="button is-primary">{{postId ? 'Save' : 'Create' }}</button>
       </div>
     </div>
   </form>
